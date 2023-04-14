@@ -1,10 +1,11 @@
 import sys
 """
-Nom du programme
-Créez un programme qui affiche son nom de fichier.
+Créez un programme qui affiche les arguments qu’il reçoit ligne par ligne, peu importe le nombre d’arguments.
 """
-taille = len(sys.argv)-1
+size = len(sys.argv)-1
+def display_argument():
+	for i in range(size):
+		print(sys.argv[i+1])
 
-for i in range(taille):
-	print(sys.argv[i+1])
-
+if __name__ == "__main__":
+	display_argument()
