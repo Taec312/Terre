@@ -6,30 +6,37 @@ Créez un programme qui détermine si une liste d’entiers est triée ou pas
 if len(sys.argv[1]) != 1:  
 	print("erreur.")
 """
-taille = len(sys.argv)-1								#le nom du fichier compte 
-i = 1
-val = 0
-if sys.argv[1].isdigit() != True and taille+1 == 2:	
-	print("erreur.")
-	val = 1
-else:
-	if int(sys.argv[1]) < int(sys.argv[2]):
+def sort_or_not():
+	taille = len(sys.argv)-1								#le nom du fichier compte 
+	i = 1													#par de i = 0 -> nom du fichier
+	first_number = int(sys.argv[1] )
+	second_number = int(sys.argv[2] )												
+	if first_number < second_number:
 		while i <= taille-1: 
-			if int(sys.argv[i]) > int(sys.argv[i+1]):		#par de i = 0 -> nom du fichier
-				print("Pas triée !")
-				val = 1
-				break
+			if int(sys.argv[i]) > int(sys.argv[i+1]):		
+				return 0
 			else:
 				i += 1
+		return 1
 	else:
-		if int(sys.argv[1]) > int(sys.argv[2]):
+		if first_number > second_number:
 			while i <= taille-1:
 				if int(sys.argv[i]) < int(sys.argv[i+1]):
-					print("Pas triée !")
-					val = 1
-					break
+					return 0
 				else:
 					i += 1
-		
-if val == 0:
-	print("triée !")
+			return 1
+
+def main():
+	if sys.argv[1].isdigit() != True and taille+1 == 2:	
+		print("erreur.")
+	else:
+		if sort_or_not():
+			print("trié")
+		else:
+			print("Pas triée !")
+
+if __name__ == '__main__':
+	main()
+
+	

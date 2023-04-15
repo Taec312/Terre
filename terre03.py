@@ -5,6 +5,7 @@ Créez un programme qui affiche l’alphabet à partir de la lettre donnée en a
 
 
 def display_alphabet():
+	
 	alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 	l =""
 	i = 0
@@ -16,7 +17,15 @@ def display_alphabet():
 		l += alphabet[i]
 		i += 1
 	print(l)
+	
+def main():
+	if len(sys.argv) != 2:
+		print("rentrer juste une lettre")
+	else:
+		display_alphabet()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 	letter = sys.argv[1]
-	display_alphabet()
+	main()
+	
+	

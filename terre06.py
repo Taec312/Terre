@@ -2,14 +2,17 @@ import sys
 """Inverser une chaîne
 Créez un programme qui affiche l’inverse de la chaîne de caractères donnée en argument.
 """
-l = sys.argv[1]
-liste = ""
-taille = len(l)-1
-t= len(l)
-print(taille)
-print(t)
-for i in range(t):
-	liste += l[taille]
-	taille -= 1
+def reverse_chain():      #chaine inversé
+	liste = ""
+	position = len(arg)-1
+	t= len(arg)
 
-print(liste)
+	for i in range(t):
+		liste += arg[position]
+		position -= 1
+
+	print(liste)
+
+if __name__ == "__main__":
+	arg = sys.argv[1]
+	reverse_chain()
