@@ -2,11 +2,22 @@ import sys
 """Taille d’une chaîne
 Créez un programme qui affiche le nombre de caractères d’une chaîne de caractères passée en argument.
 """
-def list_length():
-	if len(sys.argv) != 2:
-		print("erreur")
-	else:
-		while 
 
+def len_list():
+	including = True
+	i = 0
+	while including == True:
+		try:
+			list[i]
+		except Exception as e:
+			print("la longeur de la liste est ", i)
+			including = False
+		finally:
+			i += 1
+
+		
 if __name__ == "__main__":
-	list_length()
+	list = sys.argv[1]
+	len_list()
+
+		
